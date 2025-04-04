@@ -5,7 +5,7 @@
       mountOptions = [ "defaults" "size=16G" "mode=755" ];
     };
     disk.main = {
-      device = "/dev/disk/by-id/ata-CT240BX500SSD1_2335E872B8C6";
+      device = "/dev/disk/by-id/ata-VBOX_HARDDISK_VB2cadbe8e-ff0d6db1";
       type = "disk";
       content = {
         type = "gpt";
@@ -61,7 +61,7 @@
       };
     };
     disk.media = {
-      device = "/dev/disk/by-id/ata-TOSHIBA_MQ04ABF100_69HCPJWAT";
+      device = "/dev/disk/by-id/ata-VBOX_HARDDISK_VB2cadbe8e-ff0d6db1";
       type = "disk";
       content = {
         type = "gpt";
