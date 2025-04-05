@@ -32,14 +32,13 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./dist  # change to `build` or `public` depending on your framework
+          path: ./dist  # Change to your actual build output folder (e.g., 'build' or 'public')
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
