@@ -54,7 +54,7 @@
   };
   boot.loader.grub = {
   enable = true;
-  version = 2;
+  #version = 2;
   device = "/dev/disk/by-id/ata-VBOX_HARDDISK_VB66928c71-7100f75f";
 };
 
