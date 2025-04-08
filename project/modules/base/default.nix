@@ -46,13 +46,17 @@ in {
       ];
       initrd = {
         systemd.enable = true;
-        verbose = true;
+        verbose = false;
       };
       loader = {
         timeout = 0;
         systemd-boot = {
-          enable = true;
+          enable = mkIf config.boot.loader.efi.canTouchEfiVariables true;
           consoleMode = "max";
+        };
+        grub = {
+          enable = mkIf (!config.boot.loader.efi.canTouchEfiVariables) true;
+          device = mkIf (!config.boot.loader.efi.canTouchEfiVariables) "/dev/sda"; # Adjust as needed
         };
         efi.canTouchEfiVariables = true;
       };
@@ -133,9 +137,10 @@ in {
         allowedUDPPorts = [];
       };
       networkmanager.enable = true;
-      interfaces.enp0s3.useDHCP = true;
-      interfaces.br0.useDHCP = true;
-    };
+      enp0s3.useDHCP = mkIf (hasAttr "enp0s3" config.networking.interfaces) true;
+        br0.useDHCP = mkIf (hasAttr "br0" config.networking.interfaces) true;
+      };
+  };
 
     # Console configuration
     console = {
