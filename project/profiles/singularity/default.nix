@@ -52,6 +52,12 @@
   proxy = {
     enable = false;
   };
+  boot.loader.grub = {
+  enable = true;
+  version = 2;
+  device = "/dev/sda"; # Replace with the actual device (e.g., /dev/vda, /dev/nvme0n1)
+};
+
 
   # Selfhosted stack configuration (commented out in original)
   #selfhosted = {
