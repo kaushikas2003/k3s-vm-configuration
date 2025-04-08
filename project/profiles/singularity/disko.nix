@@ -10,15 +10,17 @@
       content = {
         type = "gpt";
         partitions = {
-          ESP = {
-            name = "ESP";
-            size = "256M";
-            type = "EF00";
-            content = {
-              type = "filesystem";
-              format = "vfat";
-              mountpoint = "/boot";
-            };
+          #ESP = {
+            #name = "ESP";
+            #size = "256M";
+            #type = "EF00";
+            #content = {
+              #type = "filesystem";
+              #format = "vfat";
+              #mountpoint = "/boot";
+            #};
+            # No ESP needed for BIOS + GRUB
+
           };
           nix = {
             size = "100%";
