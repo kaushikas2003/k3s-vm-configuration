@@ -54,6 +54,16 @@
                     "ssd"
                   ];
                 };
+                "/media" = {
+  mountpoint = "/media";
+  mountOptions = [
+    "noatime"
+    "nodiratime"
+    "compress=zstd"
+    "ssd"
+  ];
+};
+
               };
             };
           };
