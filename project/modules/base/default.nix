@@ -137,10 +137,11 @@ in {
         allowedUDPPorts = [];
       };
       networkmanager.enable = true;
-      enp0s3.useDHCP = mkIf (hasAttr "enp0s3" config.networking.interfaces) true;
+      interfaces = {
+        enp0s3.useDHCP = mkIf (hasAttr "enp0s3" config.networking.interfaces) true;
         br0.useDHCP = mkIf (hasAttr "br0" config.networking.interfaces) true;
       };
-  };
+    };
 
     # Console configuration
     console = {
