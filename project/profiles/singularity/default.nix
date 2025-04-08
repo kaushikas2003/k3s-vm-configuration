@@ -55,7 +55,7 @@
   boot.loader.grub = {
   enable = true;
   version = 2;
-  device = "/dev/sda"; # Replace with the actual device (e.g., /dev/vda, /dev/nvme0n1)
+  device = "/dev/disk/by-id/ata-VBOX_HARDDISK_VB66928c71-7100f75f";
 };
 
 
