@@ -20,8 +20,7 @@
               #mountpoint = "/boot";
             #};
             # No ESP needed for BIOS + GRUB
-
-          };
+          #};  # This closing brace had a semicolon after it
           nix = {
             size = "100%";
             name = "nix";
@@ -57,15 +56,14 @@
                   ];
                 };
                 "/media" = {
-  mountpoint = "/media";
-  mountOptions = [
-    "noatime"
-    "nodiratime"
-    "compress=zstd"
-    "ssd"
-  ];
-};
-
+                  mountpoint = "/media";
+                  mountOptions = [
+                    "noatime"
+                    "nodiratime"
+                    "compress=zstd"
+                    "ssd"
+                  ];
+                };
               };
             };
           };
