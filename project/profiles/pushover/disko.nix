@@ -1,7 +1,7 @@
 {
   disko.devices = {
     disk.main = {
-      device = "/dev/disk/by-id/ata-VBOX_HARDDISK_VB2cadbe8e-ff0d6db1";
+      device = "/dev/disk/by-id/ata-VBOX_HARDDISK_VB66928c71-7100f75f";
       type = "disk";
       content = {
         type = "gpt";
