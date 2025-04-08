@@ -1,10 +1,10 @@
 {inputs, ...}: {
   imports = [
-    inputs.self.nixosModules.base
-    inputs.self.nixosModules.editor
-    inputs.self.nixosModules.k3svm
-    inputs.self.nixosModules.mediastack
-    inputs.self.nixosModules.proxy
+    ../../modules/base/default.nix
+    ../../modules/editor/default.nix
+    ../../modules/k3svm/default.nix
+    ../../modules/mediastack/default.nix
+    ../../modules/proxy/default.nix
     #inputs.self.nixosModules.selfhosted
     ./disko.nix
   ];
