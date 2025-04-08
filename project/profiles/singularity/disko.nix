@@ -60,28 +60,28 @@
         };
       };
     };
-    disk.media = {
-      device = "/dev/disk/by-id/ata-VBOX_HARDDISK_VB66928c71-7100f75f";
-      type = "disk";
-      content = {
-        type = "gpt";
-        partitions = {
-          media = {
-            size = "100%";
-            name = "media";
-            content = {
-              type = "filesystem";
-              format = "ext4";
-              mountpoint = "/media";
-              mountOptions = [
-                "noatime"
-                "nodiratime"
-                "discard"
-              ];
-            };
-          };
-        };
-      };
-    };
+    #disk.media = {
+      #device = "/dev/disk/by-id/ata-VBOX_HARDDISK_VB66928c71-7100f75f";
+      #type = "disk";
+      #content = {
+        #type = "gpt";
+        #partitions = {
+          #media = {
+            #size = "100%";
+            #name = "media";
+            #content = {
+              #type = "filesystem";
+              #format = "ext4";
+              #mountpoint = "/media";
+              #mountOptions = [
+                #"noatime"
+                #"nodiratime"
+                #"discard"
+              #];
+            #};
+          #};
+        #};
+      #};
+    #};
   };
 }
