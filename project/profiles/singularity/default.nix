@@ -13,8 +13,8 @@
   base = {
     enable = true;
     hostname = "singularity";
-    username = "Kaushikas2003";
-    hashedPassword = "$6$93T3Bmjp7k4pN1SG$PVbieMJwcSx0RlSCc8TSDYhjtAB8D0FXQocGofpVyIgWQLWyhyueow/hOG7ewm5P36eotz0WzCxW6V04KFCuj1";
+    username = "";
+    hashedPassword = "";
   };
 
   # Editor (neovim) configuration
