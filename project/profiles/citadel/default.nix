@@ -10,7 +10,7 @@
   base = {
     enable = true;
     hostname = "citadel";
-    username = "Kaushikas2003";
+    username = "";
     hashedPassword = "";
   };
   # Sets up nixvim
